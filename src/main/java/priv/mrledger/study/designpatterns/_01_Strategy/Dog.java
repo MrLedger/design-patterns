@@ -7,6 +7,10 @@
  */
 package priv.mrledger.study.designpatterns._01_Strategy;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
 /**
  *
  *
@@ -16,12 +20,23 @@ package priv.mrledger.study.designpatterns._01_Strategy;
  * modifyTime           author              description
  * -------------------------------------------------------------------
  */
+@EqualsAndHashCode(callSuper = true)
+@Data
 public class Dog extends Animal {
 
 	public Dog(int gender, int age, IMoveBehavior moveBehavior) {
 		this.gender = gender;
 		this.age = age;
 		this.moveBehavior = moveBehavior;
+	}
+
+	@Override
+	public String toString() {
+		return "Dog{" +
+				"gender=" + gender +
+				", age=" + age +
+				", moveBehavior=" + moveBehavior +
+				'}';
 	}
 
 }

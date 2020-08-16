@@ -29,4 +29,13 @@ public class Animal {
 	public void move() {
 		moveBehavior.move();
 	}
+
+	@Override
+	public String toString() {
+		return "Animal{" +
+				"gender=" + gender +
+				", age=" + age +
+				", moveBehavior=" + moveBehavior +
+				'}';
+	}
 }
