@@ -21,10 +21,10 @@ import lombok.Data;
 @Data
 public class Animal {
 
-	Integer gender;
-	Integer age;
+	protected Integer gender;
+	protected Integer age;
 
-	IMoveBehavior moveBehavior;
+	protected IMoveBehavior moveBehavior;
 
 	public void move() {
 		moveBehavior.move();

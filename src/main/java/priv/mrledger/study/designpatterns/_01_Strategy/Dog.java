@@ -30,6 +30,18 @@ public class Dog extends Animal {
 		this.moveBehavior = moveBehavior;
 	}
 
+	public void show() {
+		super.age = 0;
+		System.out.println(super.toString());
+		System.out.println(this.toString());
+
+		System.out.println("----------");
+
+		this.age = 1000;
+		System.out.println(super.toString());
+		System.out.println(this.toString());
+	}
+
 	@Override
 	public String toString() {
 		return "Dog{" +
